@@ -1,10 +1,16 @@
-<%= link_to 'New Task', new_task_path, remote: true %>
+ <div class="row">
+  <div class="col-md-3">
+  <%= link_to new_task_path, remote: true do %>
+    <button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Add Task </button>
+  <% end %>
 
-<div id="task-form" style="display:none;"></div>  
-
-<h2>Tasks</h2>
-<div id="tasks">
-  <ul>
-    <%= render @tasks %>
-  </ul>
-</div>
+   <div id="task-form" style="display:none;"></div> 
+  </div>
+  <div class="col-md-8"> 
+    <h2>Tim's Tasks</h2>
+    <div id="tasks">
+      <div class="row">
+        <%= render @tasks %>
+      </div>
+    </div>
+  </div>
